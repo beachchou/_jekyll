@@ -1,0 +1,17 @@
+---
+layout: page
+---
+{{ content }}
+
+{% for flter in page.flters %}
+{% assign docs = site.documents | where_exp: "item", "item[page.flter-attribute] contains flter" %}
+
+{% if docs.size > 0 %}
+<h2>{{ flter }}</h2>
+
+{% include list-documents.html docs=docs %}
+
+{% else %}
+<h2>{{ flter }} Empty</h2>
+{% endif %}
+{% endfor %}

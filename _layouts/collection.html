@@ -1,0 +1,11 @@
+---
+layout: page
+---
+{{ content }}
+
+{% include nav-page-flters.html %}
+
+{% assign docs = site[page.collection] | sort: "lesson" %}
+{% include list-documents.html docs=docs %}
+
+{% include nav-next.html %}

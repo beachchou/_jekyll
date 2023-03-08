@@ -1,0 +1,10 @@
+<section>
+    {% for doc in include.docs %}
+    {% if doc.flter-attribute %}
+    {% else %}
+    <article>
+        <h2><a href="{{ doc.url }}">{{ doc.title}}</a></h2>
+    </article>
+    {% endif %}
+    {% endfor %}
+</section>

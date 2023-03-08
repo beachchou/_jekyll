@@ -1,0 +1,11 @@
+---
+layout: default
+---
+{{ content }}
+
+{% assign docs = site.documents | where_exp: "item", "item.layout == 'collection-index'" %}
+
+{% if docs.size > 0 %}
+
+{% include list-collection-index.html docs=docs %}
+{% endif %}

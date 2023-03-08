@@ -1,0 +1,12 @@
+{% for flter-collection in page.flter-collections %}
+<section>
+    <h2>{{ flter-collection }}</h2>
+    <nav>
+        {% for flter-doc in site[flter-collection] %}
+            {% if page[flter-doc[flter-attribute]] contains flter-doc.flters %}
+                <a href="{{flter-doc.url}}">{{flter-doc.title}}</a>
+            {% endif %}
+        {% endfor %}
+    </nav>
+</section>
+{% endfor %}

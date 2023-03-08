@@ -1,0 +1,3 @@
+---
+flters: collection-tag
+---

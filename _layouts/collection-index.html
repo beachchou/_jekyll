@@ -1,0 +1,14 @@
+---
+layout: page
+---
+{{ content }}
+
+{% assign docs = site[page.collection] %}
+
+{% if docs.size > 0 %}
+
+{% include list-documents.html docs=docs %}
+
+{% else %}
+<h2>Empty</h2>
+{% endif %}
