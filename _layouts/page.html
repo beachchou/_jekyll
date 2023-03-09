@@ -1,11 +1,14 @@
 ---
 layout: default
 ---
-{{ content }}
+<main class="flex">
+    {{ content }}
+</main>
+<footer>
+    {% assign docs = site.documents | where_exp: "item", "item.layout == 'collection-index'" %}
 
-{% assign docs = site.documents | where_exp: "item", "item.layout == 'collection-index'" %}
-
-{% if docs.size > 0 %}
-
-{% include list-collection-index.html docs=docs %}
-{% endif %}
+    {% if docs.size > 0 %}
+    
+    {% include list-collection-index.html docs=docs %}
+    {% endif %}
+</footer>

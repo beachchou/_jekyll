@@ -1,11 +1,14 @@
 ---
 layout: page
 ---
-{{ content }}
+<header>
+    {{ content }}
+</header>
 
 {% for flter in page.flters %}
 {% assign docs = site.documents | where_exp: "item", "item[page.flter-attribute] contains flter" %}
 
+<section class="wrapper">
 {% if docs.size > 0 %}
 <h2>{{ flter }}</h2>
 
@@ -14,4 +17,5 @@ layout: page
 {% else %}
 <h2>{{ flter }} Empty</h2>
 {% endif %}
+</section>
 {% endfor %}

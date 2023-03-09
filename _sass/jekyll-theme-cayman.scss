@@ -1,6 +1,8 @@
 @import "normalize";
 @import "rouge-github";
 @import "variables";
+@import "style";
+@import "layout";
 
 @mixin large {
   @media screen and (min-width: #{$large-breakpoint}) {

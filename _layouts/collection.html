@@ -1,11 +1,13 @@
 ---
 layout: page
 ---
-{{ content }}
+<article class="wrapper">
+    {{ content }}
+    {% include nav-next.html %}
+</article>
+<aside class="wrapper">
+    {% include nav-page-flters.html %}
 
-{% include nav-page-flters.html %}
-
-{% assign docs = site[page.collection] | sort: "lesson" %}
-{% include list-documents.html docs=docs %}
-
-{% include nav-next.html %}
+    {% assign docs = site[page.collection] | sort: "lesson" %}
+    {% include list-documents.html docs=docs %}
+</aside>

@@ -1,0 +1,21 @@
+.flex{
+    display: flex;
+    flex-wrap:wrap;
+
+    &>aside{
+        flex: 1 10em;
+        min-width: 0;// fix item overflow
+    }
+    &>article,&>section,&>main{
+        flex: 1 60em;
+        min-width: 0;// fix item overflow
+    }
+    &>header,&>footer{
+        flex: 100%;
+        min-width: 0;// fix item overflow
+    }
+}
+
+.wrapper{
+    padding: .5em;
+}

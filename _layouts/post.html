@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
-{{ content }}
-
-{% include nav-page-flters.html %}
-
-{% include nav-next.html %}
+<article class="wrapper">
+    {{ content }}
+    {% include nav-next.html %}
+</article>
+<aside class="wrapper">
+    {% include nav-page-flters.html %}
+</aside>
